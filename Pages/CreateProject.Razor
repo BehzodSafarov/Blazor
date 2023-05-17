@@ -1,0 +1,60 @@
+@page "/createProject"
+
+@using BlazorTask.Services.Interfaces;
+@inject IProjectService  projectService;
+@inject NavigationManager NavigationManager;
+<PageTitle>CreateProject</PageTitle>
+
+<h1>Create</h1>
+<form>
+    <div class="form-group">
+        <label for="owner">Owner</label>
+        <input id="owner" class="form-control" @bind="OwnerName" required />
+    </div>
+    <div class="form-group">
+        <label for="repository">Repository</label>
+        <input id="repository" class="form-control" @bind="RepoName" required />
+    </div><br>
+
+    <button type="button" class="btn btn-primary" @onclick="Create">Create</button>
+    <button type="button" class="createDefault"  @onclick="CreateDefaultProjects">CreateDefaults</button>
+
+    <div class="message">@Message</div>
+</form>
+
+
+@code {
+        public string? OwnerName {get; set;}
+        public string? RepoName {get; set;}
+        public string? Message {get; set;}
+
+        private async void Create()
+        {
+            Message = "";
+            var createProject = await projectService.CreateAsync(OwnerName, RepoName);
+
+            OwnerName = "";
+            RepoName = "";
+            NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+        }
+
+        private async void CreateDefaultProjects()
+        {
+             await  projectService.CreateDefaultProjectsAsync();
+             NavigationManager.NavigateTo("/all");
+        }
+
+}
+
+<style>
+   .background-red {
+     background-color: red;
+    }
+
+   .background-blue {
+    background-color: blue;
+    }
+    .createDefault{
+        background-color:yellow;
+    }
+</style>
