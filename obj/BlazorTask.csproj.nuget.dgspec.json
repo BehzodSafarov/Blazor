@@ -61,6 +61,10 @@
               "target": "Package",
               "version": "[7.0.5, )"
             },
+            "Microsoft.Entityframeworkcore.sqlite": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.17.2, )"

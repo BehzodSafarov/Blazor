@@ -63,7 +63,10 @@ public class ProjectService : IProjectService
     }
 
     public async Task CreateDefaultProjectsAsync()
-    {
+    {       
+        CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
+        Timer timer = new Timer(CancelOperation!, cancellationTokenSource, TimeSpan.FromMinutes(2), Timeout.InfiniteTimeSpan);
+
         _logger.LogInformation($"Started creating default projects");
         var gitHubProject = new Dictionary<string, string>
         {
@@ -85,11 +88,19 @@ public class ProjectService : IProjectService
              await CreateAsync(project.Value, project.Key);
            }
         }
-        catch (System.Exception e)
+        catch (System.Exception)
         {
-            _logger.LogInformation(e.Message);
-            throw new Exception(e.Message);
+            _logger.LogInformation("Operation was cancelled.");
         }
+        timer.Dispose();
+        cancellationTokenSource.Dispose();
+    }
+
+    public static void CancelOperation(object state)
+    {
+        // Cancel the operation by invoking Cancel on the CancellationTokenSource
+        CancellationTokenSource cancellationTokenSource = (CancellationTokenSource)state;
+        cancellationTokenSource.Cancel();
     }
 
     public async Task DeleteAsync(Guid? id)

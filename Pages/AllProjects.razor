@@ -1,4 +1,5 @@
 @page "/all"
+@attribute [Authorize]
 @using Microsoft.AspNetCore.Identity
 @using BlazorTask.Data;
 @using BlazorTask.Services.Interfaces;
@@ -21,8 +22,8 @@
             <tr>
                 <td class="logo-cell"><img src="@project.LogoUrl" alt="Product Logo" class="image" /></td>
                 <td>@project.Name</td>
-                <td>@project.Description</td>
-                <td>@project.RepoUrl</td>
+                <td>@project.Description</td><br>
+                <a href="@project.RepoUrl" target="_blank">@project.RepoUrl</a>
                 @if (UserRole == "Admin")
                 {  
                     <td class="action-cell">

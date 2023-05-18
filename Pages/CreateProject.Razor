@@ -1,4 +1,5 @@
 @page "/createProject"
+@attribute [Authorize]
 
 @using BlazorTask.Services.Interfaces;
 @inject IProjectService  projectService;
@@ -6,6 +7,7 @@
 <PageTitle>CreateProject</PageTitle>
 
 <h1>Create</h1>
+<h1>Inter GitHub project owner name and repository</h1>
 <form>
     <div class="form-group">
         <label for="owner">Owner</label>
@@ -16,43 +18,131 @@
         <input id="repository" class="form-control" @bind="RepoName" required />
     </div><br>
 
-    <button type="button" class="btn btn-primary" @onclick="Create">Create</button>
-    <button type="button" class="createDefault"  @onclick="CreateDefaultProjects">CreateDefaults</button>
+    <button disabled="@IsProcessing" type="button" class="btn btn-primary" @onclick="Create">Create</button>
+    <button disabled="@IsProcessing" type="button" class="createDefault"  @onclick="CreateDefaultProjects">CreateDefaults</button>
 
-    <div class="message">@Message</div>
+    <div class="@GetMessageClass()">@Message</div>
+
+   @if (IsProcessing)
+    {
+        <div>
+            <span>Processing...</span>
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+    }
 </form>
-
 
 @code {
         public string? OwnerName {get; set;}
         public string? RepoName {get; set;}
-        public string? Message {get; set;}
+        public bool IsSaveSuccessful { get; set; }
+
+        public bool IsProcessingProperty;
+        public bool IsProcessing
+         {
+                get => IsProcessingProperty;
+                set
+                {
+                    if (IsProcessingProperty != value)
+                    {
+                        IsProcessingProperty = value;
+                        StateHasChanged();
+                    }
+                }
+         }
+        private string messageProperty;
+        public string? Message 
+         {
+                get => messageProperty;
+                set
+                {
+                    if (messageProperty != value)
+                    {
+                        messageProperty = value;
+                        StateHasChanged();
+                    }
+                }
+         }
 
         private async void Create()
         {
-            Message = "";
-            var createProject = await projectService.CreateAsync(OwnerName, RepoName);
+            IsProcessing = true;
+            CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
 
-            OwnerName = "";
-            RepoName = "";
-            NavigationManager.NavigateTo(NavigationManager.Uri, forceLoad: true);
+            Timer timer = new Timer(CancelOperation, cancellationTokenSource, TimeSpan.FromSeconds(10), Timeout.InfiniteTimeSpan);
+            Message = "";
+            try
+            {
+                var createProject = await projectService.CreateAsync(OwnerName, RepoName);
+                
+                OwnerName = "";
+                RepoName = "";
+                if(createProject is null)
+                {
+                    IsSaveSuccessful = false;
+                    Message = "Something went wrong";
+                }
+                else
+                {
+                    IsSaveSuccessful = true;
+                    Message = "Project Saved succsessefuly";
+                }
+                
+            }
+            catch
+            {
+                Console.WriteLine("Canseled prosses");
+            }
+            finally
+            {
+                IsProcessing = false;
+            }
+            timer.Dispose();
+            cancellationTokenSource.Dispose();
         }
 
         private async void CreateDefaultProjects()
         {
-             await  projectService.CreateDefaultProjectsAsync();
-             NavigationManager.NavigateTo("/all");
+            IsProcessing = true;
+            try
+            {
+                await  projectService.CreateDefaultProjectsAsync();
+                NavigationManager.NavigateTo("/all");
+            }
+            finally
+            {
+             IsProcessing = false;
+            }
+        }
+
+        public static void CancelOperation(object state)
+        {
+            // Cancel the operation by invoking Cancel on the CancellationTokenSource
+            CancellationTokenSource cancellationTokenSource = (CancellationTokenSource)state;
+            cancellationTokenSource.Cancel();
+        }
+
+        private string GetMessageClass()
+        {
+            if (IsSaveSuccessful)
+            {
+                return "success-message";
+            }
+            else
+            {
+                return "error-message";
+            }
         }
 
 }
 
 <style>
-   .background-red {
-     background-color: red;
+    .success-message {
+        color: green;
     }
 
-   .background-blue {
-    background-color: blue;
+    .error-message {
+        color: red;
     }
     .createDefault{
         background-color:yellow;

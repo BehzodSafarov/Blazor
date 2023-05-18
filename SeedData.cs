@@ -44,7 +44,7 @@ public class SeedData
         }
     }
 
-    public static async Task CreateDefaultAdmin(IApplicationBuilder app)
+    public static async Task CreateDefaultUser(IApplicationBuilder app)
     {
         using var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope();
 
@@ -53,7 +53,7 @@ public class SeedData
         var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
         var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-        var admin = config.GetSection("Identity:Admin").Get<SeedUser>();
+        var admin = config.GetSection("Identity:User").Get<SeedUser>();
         
         var newAdmin = new IdentityUser
         {
@@ -63,14 +63,14 @@ public class SeedData
 
         if(newAdmin is null)
         {
-            logger.LogInformation("Admin is not found frim apsettings");
+            logger.LogInformation("User is not found frim apsettings");
             return;
         }
         
         try
         {
             var isExistAdmin = await userManager.CheckPasswordAsync(newAdmin, admin.Password!);
-            var role = await roleManager.FindByNameAsync("Admin");
+            var role = await roleManager.FindByNameAsync("User");
 
             if(!isExistAdmin && role is not null)
             {
@@ -78,7 +78,7 @@ public class SeedData
 
                 if(!createAdminResult.Succeeded)
                 {
-                    logger.LogInformation("Admin is not created with name "+  admin.UserName);
+                    logger.LogInformation("User is not created with name "+  admin.UserName);
                     return;
                 }
 
@@ -86,16 +86,16 @@ public class SeedData
 
                 if(!addToRoleResult.Succeeded)
                 {
-                    logger.LogInformation("Role is not created with name "+ role.Name);
+                    logger.LogInformation("Role is not added with name "+ role.Name);
                     return;
                 }
             }
             
-            logger.LogInformation("Admin Created Successefuly with name "+ admin.UserName);
+            logger.LogInformation("User Created Successefuly with name "+ admin.UserName);
         }
         catch(Exception e)
         {
-           logger.LogInformation("Error with creating Seed Admin");
+           logger.LogInformation("Error with creating Seed User");
            throw new Exception(e.Message);
         }
     }

@@ -14,7 +14,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
-    options.UseNpgsql(connectionString));
+{
+    options.UseNpgsql(connectionString);
+});
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => 
@@ -59,5 +61,5 @@ app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
 await SeedData.CreateDefaultRoles(app);
-await SeedData.CreateDefaultAdmin(app);
+await SeedData.CreateDefaultUser(app);
 app.Run();
