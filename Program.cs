@@ -60,6 +60,6 @@ app.MapControllers();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 
-// await SeedData.CreateDefaultRoles(app);
-// await SeedData.CreateDefaultUser(app);
+await SeedData.CreateDefaultRoles(app);
+await SeedData.CreateDefaultUser(app);
 app.Run();

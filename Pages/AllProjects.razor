@@ -1,8 +1,8 @@
 @page "/all"
 @attribute [Authorize]
-@using Microsoft.AspNetCore.Identity
 @using BlazorTask.Data;
 @using BlazorTask.Services.Interfaces;
+@inject NavigationManager NavigationManager;
 @inject IProjectService  projectService;
 @inject AuthenticationStateProvider AuthenticationStateProvider
 
@@ -41,7 +41,7 @@
 
 <style>
     .image {
-        width: 50px; /* Adjust the width as per your requirement */
-        height: auto; /* Maintain the aspect ratio */
+        width: 50px;
+        height: auto;
     }
 </style>

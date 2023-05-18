@@ -117,7 +117,6 @@
 
         public static void CancelOperation(object state)
         {
-            // Cancel the operation by invoking Cancel on the CancellationTokenSource
             CancellationTokenSource cancellationTokenSource = (CancellationTokenSource)state;
             cancellationTokenSource.Cancel();
         }
