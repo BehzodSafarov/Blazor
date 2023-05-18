@@ -4,8 +4,6 @@ namespace BlazorTask.Services.Interfaces;
 
 public interface IProjectService
 {
-    Task<Project> CreateAsync(string ownerName, string repoName);
-    Task DeleteAsync(Guid? id);
+    Task CreateAsync();
     Task<List<Project>> GetAllAsync();
-    Task CreateDefaultProjectsAsync();
 }

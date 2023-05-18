@@ -9,61 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BlazorTask
 build_property.RootNamespace = BlazorTask
-build_property.ProjectDir = D:\DigitalRevolutionsProjects\BlazorTask\BlazorTask\
+build_property.ProjectDir = d:\DigitalRevolutionsProjects\Task\Blazor\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\DigitalRevolutionsProjects\BlazorTask\BlazorTask
+build_property.MSBuildProjectDirectory = d:\DigitalRevolutionsProjects\Task\Blazor
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/App.razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Pages/AllProjects.razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Pages/AllProjects.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsUHJvamVjdHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Pages/CreateProject.Razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Pages/CreateProject.Razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlUHJvamVjdC5SYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Pages/Index.razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Shared/LoginDisplay.razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Shared/LoginDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Shared/SurveyPrompt.razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Shared/SurveyPrompt.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/_Imports.razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Shared/MainLayout.razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Shared/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-rsgr3v7nbz
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Shared/NavMenu.razor]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Shared/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-eqwjb5poug
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Areas/Identity/Pages/Account/LogOut.cshtml]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Areas/Identity/Pages/Account/LogOut.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dPdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Pages/Error.cshtml]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DigitalRevolutionsProjects/BlazorTask/BlazorTask/Pages/_Host.cshtml]
+[d:/DigitalRevolutionsProjects/Task/Blazor/Pages/_Host.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\BlazorTask.csproj": {}
+    "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\BlazorTask.csproj": {}
   },
   "projects": {
-    "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\BlazorTask.csproj": {
+    "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\BlazorTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\BlazorTask.csproj",
+        "projectUniqueName": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\BlazorTask.csproj",
         "projectName": "BlazorTask",
-        "projectPath": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\BlazorTask.csproj",
+        "projectPath": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\BlazorTask.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\obj\\",
+        "outputPath": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -58,6 +58,10 @@
               "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.Entityframeworkcore.Sqlite": {
               "target": "Package",
               "version": "[7.0.5, )"
             },

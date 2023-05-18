@@ -14,121 +14,80 @@ public class ProjectService : IProjectService
         _context = context;
         _logger = logger;
     }
-    public async Task<Data.Project> CreateAsync(string ownerName, string repoName)
+    public async Task CreateAsync()
     {
-        _logger.LogInformation($"Started creating project of OwnerName {ownerName} and RepoName {repoName}");
-        try
-        {
-            var github = new GitHubClient(new ProductHeaderValue("BlazorTask"));
+        _logger.LogInformation("Started Creating 10 projects");
 
-            var repository = await github.Repository.Get(ownerName, repoName);
-
-            if(repository is null)
-            {
-                _logger.LogInformation("This repository didn't found");
-                return new();
-            }
-            
-            var oldProject = _context.Projects!.FirstOrDefault(x => x.Name == repository.FullName && x.RepoUrl == repository.HtmlUrl);
-
-            if(oldProject is not null)
-            {
-                _logger.LogInformation($"This project already exist");
-                return new();
-            }
-            var newProject = new Data.Project
-            {
-                Name = repository.FullName,
-                Description = repository.Description,
-                LogoUrl = repository.Owner.AvatarUrl,
-                RepoUrl = repository.HtmlUrl
-            };
-
-            var savedProject = await _context.Projects!.AddAsync(newProject);
-            await _context.SaveChangesAsync();
-
-            if(savedProject is null)
-            {
-                _logger.LogInformation($"Project is not created");
-                return new();
-            }
-
-            return savedProject.Entity;
-        }
-        catch (System.Exception e)
-        {
-            _logger.LogInformation("Failed project while saving in database");
-            return null;
-        }
-    }
-
-    public async Task CreateDefaultProjectsAsync()
-    {       
         CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
-        Timer timer = new Timer(CancelOperation!, cancellationTokenSource, TimeSpan.FromMinutes(2), Timeout.InfiniteTimeSpan);
+        Timer timer = new Timer(CancelOperation!, cancellationTokenSource, TimeSpan.FromMinutes(10), Timeout.InfiniteTimeSpan);
 
-        _logger.LogInformation($"Started creating default projects");
-        var gitHubProject = new Dictionary<string, string>
-        {
-            { "Spoon-Knife", "octocat" },
-            { "hello-world", "octocat" },
-            { "octocat.github.io", "octocat" },
-            { "test-repo", "octocat" },
-            { "gitignore", "github" },
-            { "hub", "github" },
-            { "bootstrap", "twbs" },
-            { "freeCodeCamp", "freeCodeCamp" },
-            { "VSCode", "microsoft" },
-            { "angular", "angular" }
-        };
+        var github = new GitHubClient(new ProductHeaderValue("Blazor"));
+
         try
         {
-           foreach (var project in gitHubProject)
-           {
-             await CreateAsync(project.Value, project.Key);
-           }
+            var searchRequest = new SearchRepositoriesRequest
+            {
+                
+                PerPage = 30,
+                Topic = GetRandomName()
+            };
+            
+            _logger.LogInformation($"Taking random repositories");
+            var searchResult = await github.Search.SearchRepo(searchRequest);
+
+            var repositories = searchResult.Items.Where(repo => !repo.Fork).Take(10);
+
+            foreach (var repository in repositories)
+            {
+                var newProject = new Data.Project
+                {
+                    Id = Guid.NewGuid(),
+                    Name = repository.FullName,
+                    RepoUrl = repository.HtmlUrl,
+                    LogoUrl = repository.Owner.AvatarUrl,
+                    Description = repository.Description
+                };
+                
+                _logger.LogInformation($"Saving repository in database with Name {repository.FullName}");
+                await _context.AddAsync(newProject);
+                await _context.SaveChangesAsync();
+            }
+
         }
-        catch (System.Exception)
+        catch (Exception ex)
         {
-            _logger.LogInformation("Operation was cancelled.");
+            _logger.LogInformation($"Error: {ex.Message}");
         }
+
         timer.Dispose();
         cancellationTokenSource.Dispose();
     }
 
     public static void CancelOperation(object state)
     {
-        // Cancel the operation by invoking Cancel on the CancellationTokenSource
         CancellationTokenSource cancellationTokenSource = (CancellationTokenSource)state;
         cancellationTokenSource.Cancel();
     }
 
-    public async Task DeleteAsync(Guid? id)
+    private string GetRandomName()
     {
-        try
+        List<string> names = new List<string>
         {
-            if(Guid.Empty == id)
-            {
-                _logger.LogInformation($"This Id is not available id = {id}");
-                return;
-            }
-            
-            var project = _context.Projects!.FirstOrDefault(x => x.Id == id);
+            "Dotnet",
+            "Java",
+            "Phyton",
+            "C++",
+            "React"
+        };
 
-            if(project is null)
-            {
-                _logger.LogInformation($"This project didn't found with id = {id}");
-                return;
-            }
+        Random random = new Random();
 
-            _context.Remove(project);
-            await _context.SaveChangesAsync();
-        }
-        catch (System.Exception e)
-        {
-            _logger.LogInformation($"Failed removing project with Id {id}");
-            throw new Exception(e.Message);
-        }
+        int randomIndex = random.Next(names.Count);
+
+        _logger.LogInformation($"Taked RandomName {names[randomIndex]}");
+
+        return names[randomIndex];
+     
     }
 
     public async Task<List<Data.Project>> GetAllAsync()

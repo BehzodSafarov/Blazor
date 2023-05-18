@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PMsYzeysitEhis7jhO/F2M9kT0ifV5stmYmKLAssGcA=",
+  "Hash": "EF9o7dXa5gQXlw6syNAqaf2zee1s9Nu1MKWifaigO5Q=",
   "Source": "BlazorTask",
   "BasePath": "_content/BlazorTask",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "BlazorTask\\wwwroot",
       "Source": "BlazorTask",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "Pattern": "**"
     }
@@ -1037,10 +1037,10 @@
       "OriginalItemSpec": "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.5\\staticwebassets\\V5\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BlazorTask.styles.css",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BlazorTask.styles.css",
       "SourceId": "BlazorTask",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "BlazorTask.styles.css",
       "AssetKind": "All",
@@ -1051,13 +1051,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BlazorTask.styles.css"
+      "OriginalItemSpec": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\obj\\Debug\\net7.0\\scopedcss\\bundle\\BlazorTask.styles.css"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BlazorTask.bundle.scp.css",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BlazorTask.bundle.scp.css",
       "SourceId": "BlazorTask",
       "SourceType": "Computed",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "BlazorTask.bundle.scp.css",
       "AssetKind": "All",
@@ -1068,13 +1068,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BlazorTask.bundle.scp.css"
+      "OriginalItemSpec": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\BlazorTask.bundle.scp.css"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -1088,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -1105,10 +1105,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -1122,10 +1122,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -1139,10 +1139,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -1156,10 +1156,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -1173,10 +1173,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -1190,10 +1190,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -1207,10 +1207,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -1224,10 +1224,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -1241,10 +1241,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -1258,10 +1258,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\css\\site.css",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\css\\site.css",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -1275,10 +1275,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\favicon.png",
+      "Identity": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\favicon.png",
       "SourceId": "BlazorTask",
       "SourceType": "Discovered",
-      "ContentRoot": "D:\\DigitalRevolutionsProjects\\BlazorTask\\BlazorTask\\wwwroot\\",
+      "ContentRoot": "D:\\DigitalRevolutionsProjects\\Task\\Blazor\\wwwroot\\",
       "BasePath": "_content/BlazorTask",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
