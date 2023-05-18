@@ -13,37 +13,37 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -816846107,
+        "HashCode": 194705217,
         "Kind": "Components.Component",
-        "Name": "BlazorTask.Pages.CreateProject",
+        "Name": "BlazorTask.Pages.Index",
         "AssemblyName": "BlazorTask",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "CreateProject"
+            "TagName": "Index"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "BlazorTask.Pages.CreateProject",
-          "Common.TypeNameIdentifier": "CreateProject",
+          "Common.TypeName": "BlazorTask.Pages.Index",
+          "Common.TypeNameIdentifier": "Index",
           "Common.TypeNamespace": "BlazorTask.Pages",
           "Runtime.Name": "Components.IComponent"
         }
       },
       {
-        "HashCode": 1710010341,
+        "HashCode": -867469338,
         "Kind": "Components.Component",
-        "Name": "BlazorTask.Pages.CreateProject",
+        "Name": "BlazorTask.Pages.Index",
         "AssemblyName": "BlazorTask",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "BlazorTask.Pages.CreateProject"
+            "TagName": "BlazorTask.Pages.Index"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "BlazorTask.Pages.CreateProject",
-          "Common.TypeNameIdentifier": "CreateProject",
+          "Common.TypeName": "BlazorTask.Pages.Index",
+          "Common.TypeNameIdentifier": "Index",
           "Common.TypeNamespace": "BlazorTask.Pages",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
@@ -81,43 +81,6 @@
         "Metadata": {
           "Common.TypeName": "BlazorTask.Pages.AllProjects",
           "Common.TypeNameIdentifier": "AllProjects",
-          "Common.TypeNamespace": "BlazorTask.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 194705217,
-        "Kind": "Components.Component",
-        "Name": "BlazorTask.Pages.Index",
-        "AssemblyName": "BlazorTask",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "BlazorTask.Pages.Index",
-          "Common.TypeNameIdentifier": "Index",
-          "Common.TypeNamespace": "BlazorTask.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -867469338,
-        "Kind": "Components.Component",
-        "Name": "BlazorTask.Pages.Index",
-        "AssemblyName": "BlazorTask",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "BlazorTask.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "BlazorTask.Pages.Index",
-          "Common.TypeNameIdentifier": "Index",
           "Common.TypeNamespace": "BlazorTask.Pages",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"

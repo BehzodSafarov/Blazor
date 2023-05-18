@@ -13,7 +13,6 @@
             <th>Name</th>
             <th>Description</th>
             <th>Url</th>
-            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -24,12 +23,6 @@
                 <td>@project.Name</td>
                 <td>@project.Description</td><br>
                 <a href="@project.RepoUrl" target="_blank">@project.RepoUrl</a>
-                @if (UserRole == "Admin")
-                {  
-                    <td class="action-cell">
-                        <button class="btn btn-danger" @onclick="() => DeleteProduct(project)">Delete</button>
-                    </td>
-                }
             </tr>
         }
     </tbody>
@@ -37,22 +30,8 @@
 
 @code{
     private List<Project> projects  = new List<Project>();
-    private string UserRole { get; set; } = "User";
-    private async void DeleteProduct(Project product)
-    {
-        await projectService.DeleteAsync(product.Id);
-        OnInitialized();
-    }
-
     protected async override void OnInitialized()
     {
-        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
-        var user = authenticationState.User;
-
-        if (user.Identity!.IsAuthenticated)
-        {
-            UserRole = user.Claims.FirstOrDefault(c => c.Type == "role")?.Value;
-        }
         projects.Clear();
         var allProjects = await projectService.GetAllAsync();
         projects.AddRange(allProjects);
